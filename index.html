@@ -1,251 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sample Draft — Court Notice / Order</title>
-    <style>
-        :root {
-            --accent: #8b0000;
-            --paper: #fffefc;
-            --muted: #555;
-            --border: #ddd;
-            --serif: "Georgia", "Times New Roman", serif;
-            --sans: "Segoe UI", Roboto, Arial, sans-serif;
-        }
+    <title>PMPML Pass - PWA</title>
+    <meta name="description" content="PMPML Pass - Mobile Transit Pass Application" />
+    <meta name="author" content="PMPML" />
 
-        body {
-            margin: 0;
-            font-family: var(--sans);
-            background: #f5f5f5;
-            color: #111;
-            line-height: 1.6;
-        }
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#dc2626" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="PMPML Pass" />
+    <meta name="msapplication-TileColor" content="#dc2626" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--paper);
-            padding: 20px;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-        }
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json" />
 
-        header {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            align-items: center;
-            margin-bottom: 20px;
-        }
+    <!-- Icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512x512.png" />
 
-        .seal-placeholder {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            border: 2px dashed var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 10px;
-            color: var(--muted);
-            text-align: center;
-            background: linear-gradient(180deg, #fff, #f9f9f9);
-            flex-shrink: 0;
-        }
+    <!-- Open Graph -->
+    <meta property="og:title" content="PMPML Pass" />
+    <meta property="og:description" content="PMPML Pass - Mobile Transit Pass Application" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/icons/icon-512x512.png" />
 
-        h1 {
-            font-family: var(--serif);
-            font-size: 1.2rem;
-            margin: 0;
-            color: var(--accent);
-        }
-
-        .govline {
-            font-weight: bold;
-            font-size: 0.9rem;
-            color: #222;
-        }
-
-        .meta {
-            font-size: 0.8rem;
-            color: var(--muted);
-            margin-left: auto;
-            text-align: right;
-        }
-
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .meta {
-                margin-left: 0;
-                text-align: left;
-                margin-top: 6px;
-            }
-        }
-
-        .names {
-            background: #fff6f6;
-            border-left: 5px solid var(--accent);
-            padding: 12px;
-            margin-bottom: 16px;
-            font-size: 0.95rem;
-        }
-
-        .content {
-            font-family: var(--serif);
-            font-size: 0.95rem;
-            white-space: pre-wrap;
-        }
-
-        .actions ol {
-            margin: 10px 0 0 20px;
-            padding: 0;
-        }
-
-        .controls {
-            margin-top: 16px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        button {
-            background: var(--accent);
-            color: white;
-            border: none;
-            padding: 12px 18px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.9rem;
-            flex: 1;
-            text-align: center;
-        }
-
-        button.ghost {
-            background: transparent;
-            color: var(--accent);
-            border: 1px solid var(--accent);
-        }
-
-        .disclaimer {
-            margin-top: 20px;
-            font-size: 0.8rem;
-            padding: 12px;
-            background: #fafafa;
-            border: 1px dashed #ccc;
-            color: #555;
-        }
-
-        footer {
-            margin-top: 20px;
-            font-size: 0.75rem;
-            color: var(--muted);
-            border-top: 1px solid #eee;
-            padding-top: 10px;
-        }
-
-        @media print {
-            body {
-                background: white;
-            }
-
-            .container {
-                box-shadow: none;
-                border: none;
-            }
-
-            .controls {
-                display: none;
-            }
-
-            .seal-placeholder {
-                border-style: solid;
-            }
-        }
-    </style>
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PMPML Pass" />
+    <meta name="twitter:description" content="PMPML Pass - Mobile Transit Pass Application" />
+    <meta name="twitter:image" content="/icons/icon-512x512.png" />
+  <script type="module" crossorigin src="/assets/index-DdxhDClJ.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CBnQbfW3.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <div class="seal-placeholder"> <img src="image copy.png" alt="gom" width="100"> </div>
-            <div>
-                <div class="govline">GOVERNMENT OF MAHARASHTRA</div>
-                <h1>COURT NOTICE / ORDER </h1>
-                <div style="font-size:0.85rem; color:#444;">
-                    In the Court of Judicial Magistrate First Class, Pune<br>
-                    Case No: [40123/2025]
-                </div>
-            </div>
-            <div class="meta">
-                Issued: 08/09/2025<br>Pune
-            </div>
-        </header>
+    <div id="root"></div>
 
-        <section class="names">
-            <strong>Accused / Alleged Persons:</strong><br>
-            • Mr. Pratik Gaikwad — IP: <b>152.23.124.12</b><br>
-            • Mr. Abhishek Badve — IP: <b>152.122.199.89</b>
-        </section>
-
-        <article class="content">
-            ORDER
-
-            Whereas it has been brought before this Court that the accused persons, Mr. Pratik Gaikwad and Mr. Abhishek
-            Badve, have developed and operated a mobile application with the intent to generate and distribute
-            fraudulent PMPML bus passes, thereby causing wrongful loss to the public transport authority and cheating
-            the public at large.
-
-            Upon consideration of the material on record, the Court observes that the alleged acts fall under the
-            following statutory provisions:
-
-            • Section 420 of the Indian Penal Code (Cheating) – Punishable with imprisonment up to 7 years and fine.
-            • Sections 465, 468, and 471 of the IPC (Forgery and Use of Forged Documents).
-            • Sections 66C and 66D of the Information Technology Act, 2000 – up to 3 years imprisonment and fine up to
-            ₹1,00,000.
-
-            Accordingly, the accused shall be liable to:
-            - Imprisonment up to 7 years (depending on gravity).
-            - Fine not less than ₹50,000 each.
-            - Permanent prohibition from creating any public service–related applications without prior approval.
-
-            The accused are directed to appear before this Court on the next hearing date. Failing this, non-bailable
-            warrants shall be issued.
-
-            Issued under the Seal of the Court
-            Dated: 09/09/2025
-            Pune
-        </article>
-
-        <div class="actions">
-            <strong>Directions:</strong>
-            <ol>
-                <li>Cease all such activities immediately.</li>
-                <!-- <li>Submit written explanation within 7 days.</li> -->
-                <li>Non-compliance will lead to escalation to authorities.</li>
-            </ol>
-        </div>
-
-        <div class="controls">
-            <button onclick="window.print()">📄 Print / Save</button>
-            <button class="ghost" onclick="copyContent()">📋 Copy Text</button>
-        </div>
-
-        <div class="disclaimer">
-            <b>Disclaimer:</b> Don't ignore this warning.
-        </div>
-    </div>
-
+    <!-- Service Worker Registration -->
     <script>
-        function copyContent() {
-            const txt = document.querySelector('.container').innerText;
-            navigator.clipboard.writeText(txt).then(() => {
-                alert('Notice text copied.');
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch((registrationError) => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
             });
         }
     </script>
